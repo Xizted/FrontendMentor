@@ -1,0 +1,244 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+  background-image: url(../../images/pattern-background-mobile.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(225, 100%, 94%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-image: url(../../images/pattern-background-desktop.svg);
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.order-card {
+  width: 32.8rem;
+  box-shadow: 0px 4px 29px 12px rgba(31, 47, 86, 0.1);
+  border-radius: 2rem;
+}
+
+@media (min-width: 1440px) {
+  .order-card {
+    width: 45rem;
+  }
+}
+
+.order-card__header img {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  display: block;
+}
+
+.order-card__informations {
+  text-align: center;
+  background-color: #fff;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 3rem 2.4rem 3.1rem 2.4rem;
+}
+
+@media (min-width: 1440px) {
+  .order-card__informations {
+    padding: 5rem;
+  }
+}
+
+.order-card__info {
+  padding: 0 1.2rem;
+}
+
+@media (min-width: 1440px) {
+  .order-card__info {
+    padding: 0 3.5rem;
+  }
+}
+
+.order-card__info h1 {
+  font-size: 2.2rem;
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+  line-height: 1.9rem;
+}
+
+@media (min-width: 1440px) {
+  .order-card__info h1 {
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+.order-card__info p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  letter-spacing: -0.025em;
+  color: hsla(224, 23%, 55%, 1);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1440px) {
+  .order-card__info p {
+    line-height: 159.4%;
+    margin-top: 1.8rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.order-card__detail-plan {
+  background-color: hsla(225, 100%, 98%, 1);
+  border-radius: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem;
+  margin-bottom: 2.6rem;
+}
+
+@media (min-width: 1440px) {
+  .order-card__detail-plan {
+    padding: 2.5rem 2.4rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.order-card__plan {
+  display: flex;
+  align-items: center;
+}
+
+.order-card__plan img {
+  max-width: 4.8rem;
+  margin-right: 2rem;
+}
+
+@media (min-width: 1440px) {
+  .order-card__plan img {
+    margin-right: 1.5rem;
+  }
+}
+
+.order-card__type-plan {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.013em;
+  color: hsla(223, 47%, 23%, 1);
+}
+
+@media (min-width: 1440px) {
+  .order-card__type-plan {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+}
+
+.order-card__price {
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  letter-spacing: 0.01em;
+  color: hsla(224, 23%, 55%, 1);
+}
+
+@media (min-width: 1440px) {
+  .order-card__price {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+}
+
+.order-card__detail-plan a {
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.06em;
+  color: hsla(245, 75%, 52%, 1);
+  transition: color 0.5s ease;
+}
+
+@media (min-width: 1440px) {
+  .order-card__detail-plan a {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+}
+
+.order-card__detail-plan a:hover {
+  color: hsla(245, 75%, 52%, 0.7);
+  text-decoration: none;
+}
+
+.order-card__confirm {
+  border: none;
+  color: #fff;
+  background-color: hsla(245, 75%, 52%, 1);
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  letter-spacing: -0.03em;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1.5rem 0;
+  box-shadow: 0px 8px 20px 5px rgba(56, 41, 224, 0.25);
+  margin-bottom: 2.3rem;
+  text-decoration: none;
+  display: inline-block;
+  user-select: none;
+  transition: background-color 0.5s ease;
+}
+
+@media (min-width: 1440px) {
+  .order-card__confirm {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.order-card__confirm:hover {
+  background-color: hsla(245, 75%, 52%, 0.7);
+}
+
+.order-card__cancel {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.045em;
+  color: hsla(224, 23%, 55%, 1);
+  transition: color 0.5s ease;
+}
+
+.order-card__cancel:hover {
+  color: hsla(223, 47%, 23%, 1);
+}
+
+.attribution {
+  margin-top: 3.5rem;
+}
