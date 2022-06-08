@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [View in Netlify](https://roaring-kringle-cfbf8e.netlify.app/)
+- Live Site URL: [View in Netlify](https://interactive-rating-component-xizted.netlify.app/)
 
 ## My process
 
