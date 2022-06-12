@@ -1,0 +1,192 @@
+/*====================================
+            Global CSS
+====================================*/
+
+:root {
+  --color-body-background: hsl(233, 47%, 7%);
+  --color-card-background: hsl(244, 38%, 16%);
+  --gradient: hsla(277, 90%, 30%, 0.5);
+
+  --color-secondary: hsl(277, 64%, 61%);
+  --color-primary: hsl(0, 0%, 100%);
+  --color-primary-light: hsla(0, 0%, 100%, 0.75);
+  --color-primary-extralight: hsla(0, 0%, 100%, 0.6);
+
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Lexend Deca', sans-serif;
+
+  --border-radius: 0.8rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--color-primary);
+  background-color: var(--color-body-background);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+.item__text-header {
+  font-family: var(--font-primary);
+}
+
+p {
+  font-family: var(--font-secondary);
+  color: var(--color-primary-extralight);
+}
+
+/*====================================
+            Card CSS
+====================================*/
+
+.card {
+  background-color: var(--color-card-background);
+  text-align: center;
+  border-radius: var(--border-radius);
+  width: 28rem;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 100rem;
+    display: flex;
+    text-align: left;
+  }
+}
+
+.card__header {
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./images/image-header-mobile.jpg);
+  height: 20rem;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+@media (min-width: 1024px) {
+  .card__header {
+    order: 1;
+    height: unset;
+    flex: 1;
+  }
+}
+
+.card__header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gradient);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .card__info {
+    padding: 5rem;
+    gap: 8rem;
+    flex: 1;
+  }
+}
+
+.card__texts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card__info .card__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  .card__info .card__title {
+    font-size: 3.5rem;
+  }
+}
+
+.card__info .card__title span {
+  color: var(--color-secondary);
+}
+
+.card__info .card__text {
+  font-size: 1.5rem;
+  letter-spacing: -0.1rem;
+  color: var(--color-primary-light);
+}
+
+@media (min-width: 1024px) {
+  .card__info .card__text {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .list {
+    flex-direction: row;
+    gap: 5rem;
+  }
+}
+
+.item .item__text-header {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.item .item__text {
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  color: var(--color-primary-extralight);
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .item .item__text {
+    font-size: 1.5rem;
+  }
+}
